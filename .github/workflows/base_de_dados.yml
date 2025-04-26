@@ -38,7 +38,8 @@ jobs:
           exec(open('04-tratamento.py').read()); \
           exec(open('05-disponibilizacao.py').read())"
 
-      - name: Commit & Push
+      - name: Auto-commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Atualização automática de dados
+          commit_message: "Commit automático"
+          skip_dirty_check: true
