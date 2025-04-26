@@ -124,7 +124,8 @@ with ui.nav_panel("Painel de Previsões"):
                 ui.card_header(ui.strong("Taxa de Câmbio (BRL/USD)"))
                 @render.plot
                 def cambio():
-                    plt = gerar_grafico(df_cambio, "Câmbio", input.h() + 1, "R\$/US\$", False)
+                    plt = gerar_grafico(df_cambio, "Câmbio", input.h() + 1, "R\\$/US\\$", False)
+                    #plt = gerar_grafico(df_cambio, "Câmbio", input.h() + 1, "R", False)
                     return plt
 
         with ui.layout_column_wrap():
