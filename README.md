@@ -37,3 +37,7 @@ jinja2==3.1.2
 `os.environ["GEMINI_API_KEY"] = "COLE AQUI A SUA CHAVE"`
 
 [Gerar API do GEMINI](https://aistudio.google.com/app/u/0/apikey)
+
+## Para executar o shiny
+
+`python -m shiny run --reload app.py`
