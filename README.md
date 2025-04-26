@@ -26,12 +26,11 @@ scikit-learn==1.5.1
 openpyxl==3.1.5
 jinja2==3.1.2
 ```
+7. Instalar `poetry self add poetry-plugin-shell`
 
+8. Abrir o virtual env do poetry com o comando `poetry shell`
 
-4. Instalar `poetry self add poetry-plugin-shell`
-
-
-É preciso setar uma variável de ambiente com a API KEY do GEMINI dentro do prompt do python ou ipython
+- É preciso setar uma variável de ambiente com a API KEY do GEMINI dentro do prompt do python ou ipython
 
 `os.environ["GEMINI_API_KEY"] = "COLE AQUI A SUA CHAVE"`
 
