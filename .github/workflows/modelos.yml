@@ -42,8 +42,13 @@ jobs:
           poetry run python -c "exec('import time;time.sleep(61)')"
           poetry run python 09-selic.py
 
-      - name: Commit & Push
+      - name: Verificar alterações
+        id: check_changes
+        run: |
+          git diff --quiet || echo "has_changes=true" >> $GITHUB_ENV
+
+      - name: Auto-commit
+        if: env.has_changes == 'true'
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: Atualização automática de previsões
-
+          commit_message: "Commit automático"
